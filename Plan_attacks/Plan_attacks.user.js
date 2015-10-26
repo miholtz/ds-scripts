@@ -121,9 +121,8 @@ window.targetsToAttack = [
 
 
 console.log("debug");
-if (localStorage.getItem('attackCount') === null)
-	localStorage.setItem('attackCount', '0')
-
+if(localStorage.getItem('attackCount') === null || localStorage.getItem('attackCount') >= window.targetsToAttack.lenth - 1)
+	localStorage.setItem('attackCount', '0');
 
 console.log("attackCount", localStorage.getItem('attackCount'));
 window.numberOfHorsesToAttackWith = 4;
@@ -141,6 +140,41 @@ window.lightHorsesAttacking = $('#unit_input_light');
 window.availableLightHorses = window.lightHorsesAttacking.next().text().replace('(', '').replace(')', '');
 
 console.log('available light horses : ', availableLightHorses);
+
+//catch information about the amount of spears
+window.spearsAttacking = $('#unit_input_spear');
+window.availableSpears = window.spearsAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available spears : ', availableSpears);
+
+//catch information about the amount of axes
+window.axesAttacking = $('#unit_input_axe');
+window.availableAxes = window.axesAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available axes : ', availableAxes);
+
+//catch information about the amount of swords
+window.swordsAttacking = $('#unit_input_sword');
+window.availableSwords = window.swordsAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available swords : ', availableSwords);
+
+//catch information about the amount of heavy horses
+window.heavyHorsesAttacking = $('#unit_input_heavy');
+window.availableHeavyHorses = window.heavyHorsesAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available heavyHorses : ', availableHeavyHorses);
+
+//catch information about the amount of battering Rams
+window.batteringRamsAttacking = $('#unit_input_ram');
+window.availableBatteringRams = window.axesAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available battering rams : ', availableBatteringRams);
+
+//catch information about the amount of catapults
+window.catapultsAttacking = $('#unit_input_catapult');
+window.availableCatapults = window.catapultsAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available catapults : ', availableCatapults);
+
+//catch information about the amount of snob
+window.snobsAttacking = $('#unit_input_snob');
+window.availableSnobs = window.axesAttacking.next().text().replace('(', '').replace(')', '');
+console.log('available snobs : ', availableSnobs);
 
 window.targetToAttackField = $('.target-input-field');
 window.tempAttackCount;
@@ -185,6 +219,17 @@ function unitsAvailable() {
 	return false;
 }
 
+function unitsAvailable(spears, swords, axes, spies, lightHorses, heavyHorses, batteringRams, catapults, snobs){
+	
+	return (spears <= window.availableSpears && swords <= window.availableSwords && axes <= window.availableAxes && spies <= window.availableSpies && lightHorses <= window.availableLightHorses && heavyHorses <= window.availableHeavyHorses && batteringRams <= window.availableBatteringRams && catapults <= window.availableCatapults && snobs <= window.availableSnobs);
+	
+}
+
+function attackTargetWith(target, spears, swords, axes, lightHorses, heavyHorses, spies, batteringRams, catapults, snob){
+	console.log("Trying to attack : " + target.x + "|" + target.y + " " + spears + " " + swords + " " + axes + " " + spies + " " + lightHorses + " " + heavyHorses + " " + batteringRams + " " + catapults + " " + snob);
+	
+	
+}
 
 function attackNextTarget() {
   console.log(1);
