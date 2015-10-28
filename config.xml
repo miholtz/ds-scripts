@@ -1,0 +1,18 @@
+<UserScriptConfig>
+	<Script basedir="Confirm_attack" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="Confirm_attack.user.js" installTime="1445420943000" modified="1445426505000" name="Confirm attack" namespace="window" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="d3d1dd0f-c68e-429a-bf32-7e1cd147218e" version="1" installurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/Confirm_attack/Confirm_attack.user.js" updateurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/Confirm_attack/Confirm_attack.user.js">
+		<Grant>none</Grant>
+		<Include>https://de119.die-staemme.de/game.php*try=confirm</Include>
+	</Script>
+	<Script basedir="Plan_attacks" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="Plan_attacks.user.js" installTime="1445428518000" modified="1446034304000" name="Plan attacks" namespace="window" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="e51bd265-6c44-407f-8849-e619bb55660b" version="1" installurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/Plan_attacks/Plan_attacks.user.js" updateurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/Plan_attacks/Plan_attacks.user.js">
+		<Grant>none</Grant>
+		<Include>https://de119.die-staemme.de/game.php*screen=place</Include>
+	</Script>
+	<Script basedir="Session_lost" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="Session_lost.user.js" installTime="1445586400000" modified="1445586436000" name="Session lost" namespace="window" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="8de40256-f9b4-4366-bbfb-50df74971a2e" version="1" installurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/Session_lost/Session_lost.user.js" updateurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/Session_lost/Session_lost.user.js">
+		<Grant>none</Grant>
+		<Include>https://www.die-staemme.de/sid_wrong.php</Include>
+	</Script>
+	<Script basedir="auto_login" checkRemoteUpdates="1" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709" description="" enabled="true" filename="auto_login.user.js" installTime="1445586468000" modified="1445590112000" name="auto login" namespace="window" noframes="false" runAt="document-end" updateMetaStatus="unknown" uuid="9d228468-2f55-44b5-9245-70815aed7fb0" version="1" installurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/auto_login/auto_login.user.js" updateurl="file:///home/michel/.mozilla/firefox/2c8ebest.default/gm_scripts/auto_login/auto_login.user.js">
+		<Grant>none</Grant>
+		<Include>https://www.die-staemme.de/</Include>
+	</Script>
+</UserScriptConfig>
