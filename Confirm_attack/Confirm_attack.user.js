@@ -9,3 +9,4 @@
 setTimeout(function(){
   $('#troop_confirm_go').click();
 }, 1500);
+//test
