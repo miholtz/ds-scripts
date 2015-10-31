@@ -44,7 +44,7 @@ window.targetsToAttackYS = [
 	{x:591, y:398, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:590, y:397, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:589, y:398, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
-	{x:594, y:389, sp:0, sw:0, ax:0, si:0, lh:8, hh:0, br:0, ca:0, sn:0},
+	{x:594, y:389, sp:0, sw:0, ax:0, si:0, lh:10, hh:0, br:0, ca:0, sn:0},
 	{x:591, y:389, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:590, y:388, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:589, y:391, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
@@ -55,7 +55,6 @@ window.targetsToAttackYS = [
 	{x:589, y:393, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:588, y:393, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:587, y:395, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
-	{x:587, y:397, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:588, y:401, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:587, y:401, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:589, y:402, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
@@ -72,7 +71,15 @@ window.targetsToAttackYS = [
 	{x:602, y:392, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
 	{x:601, y:388, sp:0, sw:0, ax:0, si:0, lh:3, hh:0, br:0, ca:0, sn:0},
 	{x:598, y:389, sp:0, sw:0, ax:0, si:0, lh:3, hh:0, br:0, ca:0, sn:0},
-	{x:597, y:389, sp:0, sw:0, ax:0, si:0, lh:3, hh:0, br:0, ca:0, sn:0}	
+	{x:597, y:389, sp:0, sw:0, ax:0, si:0, lh:3, hh:0, br:0, ca:0, sn:0},
+  {x:605, y:395, sp:0, sw:0, ax:0, si:0, lh:3, hh:0, br:0, ca:0, sn:0},
+  {x:603, y:400, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
+  {x:605, y:403, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
+  {x:605, y:405, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
+  {x:589, y:406, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0},
+  {x:589, y:407, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0},
+  {x:596, y:407, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0},
+  {x:598, y:406, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0}
 ];
 
 window.targetsToAttackMH = [
@@ -237,7 +244,7 @@ console.log("debug");
 // localStorage.setItem("targetsToAttackYS", JSON.stringify(window.targetsToAttackPR));
 
 //please adapt the ending of the array to the first letter of your fore and lastname.
-if(localStorage.getItem('attackCount') === null || localStorage.getItem('attackCount') > window.targetsToAttackMH.length - 1)
+if(localStorage.getItem('attackCount') === null || localStorage.getItem('attackCount') > window.targetsToAttackYS.length - 1)
 	localStorage.setItem('attackCount', '0');
 
 console.log("currentCount", localStorage.getItem('attackCount'));
@@ -294,7 +301,7 @@ window.tempAttackCount;
 window.currentAttackCount;
 
 //please adapt the ending of the array to the first letter of your fore and lastname.
-var target = window.targetsToAttackMH[localStorage.getItem('attackCount')];
+var target = window.targetsToAttackYS[localStorage.getItem('attackCount')];
 
 console.log("x | y", target.x + " " + target.y);
 
@@ -314,7 +321,7 @@ else{
         attack(target);
       } 
 
-    },rand(5 * (60 * 1000), 10 * (60 * 1000)));
+    },rand(1 * (60 * 1000), 7 * (60 * 1000)));
 }
 
 function unitsAvailable(target){
@@ -413,7 +420,7 @@ function countDoublesMH(){
 }
 
 // specifically function for pascal to visualise double entries
-function countDoublesPR(){
+function countDoublePR(){
   for(i = 0; i < window.targetsToAttackPR.length; i++){
     
     var isDouble = false;
@@ -423,7 +430,7 @@ function countDoublesPR(){
     for(j = 0; j < window.targetsToAttackPR.length; j++){
       
       var xj = window.targetsToAttackPR[j].x;
-      var yj = window.targetsToAttackPR[j].y;
+      var yj = window.taretsToAttackPR[j].y;
       
       if(i != j && xi == xj && yi == yj){
         isDouble = true;
