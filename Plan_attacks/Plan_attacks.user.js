@@ -413,7 +413,7 @@ function countDoublesMH(){
 }
 
 // specifically function for pascal to visualise double entries
-function countDoublePR(){
+function countDoublesPR(){
   for(i = 0; i < window.targetsToAttackPR.length; i++){
     
     var isDouble = false;
@@ -423,7 +423,7 @@ function countDoublePR(){
     for(j = 0; j < window.targetsToAttackPR.length; j++){
       
       var xj = window.targetsToAttackPR[j].x;
-      var yj = window.taretsToAttackPR[j].y;
+      var yj = window.targetsToAttackPR[j].y;
       
       if(i != j && xi == xj && yi == yj){
         isDouble = true;
