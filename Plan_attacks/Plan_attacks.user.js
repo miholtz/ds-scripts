@@ -75,7 +75,6 @@ window.targetsToAttackYS = [
   {x:605, y:395, sp:0, sw:0, ax:0, si:0, lh:3, hh:0, br:0, ca:0, sn:0},
   {x:603, y:400, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
   {x:605, y:403, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
-  {x:605, y:405, sp:0, sw:0, ax:0, si:0, lh:4, hh:0, br:0, ca:0, sn:0},
   {x:589, y:406, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0},
   {x:589, y:407, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0},
   {x:596, y:407, sp:0, sw:0, ax:0, si:1, lh:10, hh:0, br:0, ca:0, sn:0},
